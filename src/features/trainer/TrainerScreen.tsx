@@ -35,15 +35,17 @@ export function TrainerScreen() {
   }
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-      <div className="mx-auto w-full max-w-[560px]">
-        <ChessBoard
-          fen={trainer.fen}
-          orientation={sicilianRepertoire.trainee}
-          highlights={highlights}
-          onMove={handleMove}
-        />
-        <div className="mt-4">
+    <div className="grid gap-8 lg:grid-cols-[minmax(0,440px)_1fr] lg:items-start">
+      <div>
+        <div className="mx-auto aspect-square w-full max-w-[440px] overflow-hidden rounded-lg border border-slate-800">
+          <ChessBoard
+            fen={trainer.fen}
+            orientation={sicilianRepertoire.trainee}
+            highlights={highlights}
+            onMove={handleMove}
+          />
+        </div>
+        <div className="mt-4 min-h-5">
           <MoveList line={trainer.line} />
         </div>
       </div>
@@ -62,7 +64,7 @@ export function TrainerScreen() {
               </div>
             )}
             <div>
-              <h2 className="mb-2 text-sm font-medium text-slate-400">
+              <h2 className="mb-2 text-xs font-medium tracking-wide text-slate-500 uppercase">
                 Coups recommandés aux Noirs
               </h2>
               <RecommendedMoves

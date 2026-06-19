@@ -15,11 +15,19 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <header className="flex flex-wrap items-center gap-4 border-b border-slate-800 px-6 py-4">
-        <div className="mr-auto">
-          <h1 className="text-lg font-medium">Chess Coach</h1>
-          <p className="text-sm text-slate-400">
-            Entraîneur d'ouvertures · Défense sicilienne
-          </p>
+        <div className="mr-auto flex items-center gap-3">
+          <div
+            aria-hidden
+            className="flex h-9 w-9 items-center justify-center rounded-lg bg-slate-800 text-xl text-amber-400"
+          >
+            ♞
+          </div>
+          <div>
+            <h1 className="text-lg leading-tight font-medium">Chess Coach</h1>
+            <p className="text-sm text-slate-400">
+              Entraîneur d'ouvertures · Défense sicilienne
+            </p>
+          </div>
         </div>
         <nav className="flex gap-1 rounded-lg border border-slate-800 p-1">
           {TABS.map((tab) => (
